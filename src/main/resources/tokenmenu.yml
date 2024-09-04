@@ -1,0 +1,25 @@
+gui:
+  title: '&8&nLatinum Menü'
+  slots: 27
+  items:
+    top:
+      displayname: '&b⛁ Top Spieler ⛁' # item name it will display in the shop gui.
+      lore: # lore will be placed on to the item displaying information below.
+        - '&7Top Spieler'
+      slot: 12 # slot this item will go in gui.
+      material: 'PAPER' # material that will be displayed for this item.
+      glow: false # will add a glow effect to the item inside the gui.
+    exchange:
+      displayname: '&a⛁ Latinum Austausch ⛁' # item name it will display in the shop gui.
+      lore: # lore will be placed on to the item displaying information below.
+        - '&7Tausche Items Gegen Latinum'
+      slot: 14 # slot this item will go in gui.
+      material: 'EMERALD' # material that will be displayed for this item.
+      glow: false # will add a glow effect to the item inside the gui.
+    tokens:
+      displayname: '&e⛁ Dein Latinum ⛁' # item name it will display in the shop gui.
+      lore: # lore will be placed on to the item displaying information below.
+        - '&7Dein Latin-Stand: %tokens%'
+      slot: 22 # slot this item will go in gui.
+      material: 'PLAYER_HEAD' # material that will be displayed for this item.
+      glow: false # will add a glow effect to the item inside the gui.

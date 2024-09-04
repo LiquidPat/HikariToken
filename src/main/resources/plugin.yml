@@ -1,0 +1,26 @@
+name: HikariTokens
+version: '${project.version}'
+main: lithium.hikari.HikariTokens
+api-version: 1.19
+authors: [HikariSpigot]
+description: Token Economy for trading
+softdepend: [PlaceHolderAPI, Vault]
+load: STARTUP
+
+commands:
+  tokens:
+    aliases: [token, te]
+  tadmin:
+    description: tadmin main command.
+  exchange:
+    description: main token exchange command.
+  balance:
+    aliases: [balance, tokens]
+  baltop:
+    aliases: [topbal]
+  pay:
+    aliases: [give]
+  toggle:
+    aliases: [toggletoken]
+  bank:
+    description: bank system command

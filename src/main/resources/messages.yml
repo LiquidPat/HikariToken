@@ -1,0 +1,87 @@
+
+
+#   ██░ ██  ██▓ ██ ▄█▀▄▄▄       ██▀███   ██▓   ▄▄▄█████▓ ▒█████   ██ ▄█▀▓█████  ███▄    █   ██████
+#  ▓██░ ██▒▓██▒ ██▄█▒▒████▄    ▓██ ▒ ██▒▓██▒   ▓  ██▒ ▓▒▒██▒  ██▒ ██▄█▒ ▓█   ▀  ██ ▀█   █ ▒██    ▒
+#  ▒██▀▀██░▒██▒▓███▄░▒██  ▀█▄  ▓██ ░▄█ ▒▒██▒   ▒ ▓██░ ▒░▒██░  ██▒▓███▄░ ▒███   ▓██  ▀█ ██▒░ ▓██▄
+#  ░▓█ ░██ ░██░▓██ █▄░██▄▄▄▄██ ▒██▀▀█▄  ░██░   ░ ▓██▓ ░ ▒██   ██░▓██ █▄ ▒▓█  ▄ ▓██▒  ▐▌██▒  ▒   ██▒
+#  ░▓█▒░██▓░██░▒██▒ █▄▓█   ▓██▒░██▓ ▒██▒░██░     ▒██▒ ░ ░ ████▓▒░▒██▒ █▄░▒████▒▒██░   ▓██░▒██████▒▒
+#  ▒ ░░▒░▒░▓  ▒ ▒▒ ▓▒▒▒   ▓▒█░░ ▒▓ ░▒▓░░▓       ▒ ░░   ░ ▒░▒░▒░ ▒ ▒▒ ▓▒░░ ▒░ ░░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░
+#  ▒ ░▒░ ░ ▒ ░░ ░▒ ▒░ ▒   ▒▒ ░  ░▒ ░ ▒░ ▒ ░       ░      ░ ▒ ▒░ ░ ░▒ ▒░ ░ ░  ░░ ░░   ░ ▒░░ ░▒  ░ ░
+#  ░  ░░ ░ ▒ ░░ ░░ ░  ░   ▒     ░░   ░  ▒ ░     ░      ░ ░ ░ ▒  ░ ░░ ░    ░      ░   ░ ░ ░  ░  ░
+#  ░  ░  ░ ░  ░  ░        ░  ░   ░      ░                  ░ ░  ░  ░      ░  ░         ░       ░
+
+
+
+
+
+
+#  placeholders:
+# * %PREFIX% - displays the plugins prefix 'prefix: "__"'
+# * %receiver_name% - gets the player name of the receiving tokens.
+# * %receiver_displayname% - gets the player displayname of the receiving tokens.
+# * %tokens% - gets the value of current set/get/received tokens in the message.
+# * HikariToken also supports PlaceholderAPI.
+m:
+  # plugin prefix
+  PREFIX: '&#00fb9a&lHikariCoins'
+
+  # design formats > token symbols [ ⛀ ⛂ ⛁ ⛃ ]
+  SYMBOL: '⛃'
+
+  # token balance
+  BALANCE: '&#00fb9a&l光LATINUM: &f%tokens%&e⛃'
+
+  # event messages
+  PLAYER-KILL: '%PREFIX% &f%tokens% &7Latinum für das &a Töten von Spieler %player%!'
+  PLAYER-DEATH: '%PREFIX% &f%tokens% &7Latinum weil &cdu gestorben bist!'
+  ENTITY-KILL: '%PREFIX% &f%tokens% &7Latinum weil du folgendes getötet hast: &a%entity%!'
+  CRAFTING: '%PREFIX% &f%tokens% &7Latinum für &a das Craften eines Items!'
+  ADVANCEMENT: '%PREFIX% &f%tokens% &7Latinum für &adas Freischalten eines erfolgs!'
+  PORTAL-NETHER: '%PREFIX% &f%tokens% &7Latinum weil&a du in den Nether gegangen bist!'
+  PORTAL-END: '%PREFIX% &f%tokens% &7Latinum weil&a du in das End gegangen bist!'
+
+  # bank messages
+  BANK-BALANCE: '%PREFIX% &7Bank Konto: &f%tokens%&e⛃'
+  BANK-WITHDRAW: '%PREFIX% &e%amount% &7Latinum wurden von deiner Bank entfernt & deinem Latinumstand hinzugefügt.'
+  BANK-DEPOSIT: '%PREFIX% &e%amount% &7Latinum wurden deiner Bank hinzugefügt.'
+  BANK-HELP:
+    - '&#00fb9a&l光Latinum Bank Commands:'
+    - ''
+    - '&3/bank &7- zeigt deinen Latinumstand auf der Bank an.'
+    - '&3/bank [help] &7- zeigt dir diese hilfe.'
+    - '&3/bank [withdraw] <amount> &7- hebt Token von deiner Bank ab.'
+    - '&3/bank [deposit] <amount> &7- zahlt in deine Bank ein.'
+    - ''
+    - '&b<> &7Benötigt. &b[] &7Optional.'
+
+  # admin messages
+  ADMIN-HELP:
+    - '&#00fb9a&l光Latinum Admin Commands:'
+    - ''
+    - '&c/tadmin &7- will display this help menu.'
+    - '&c/tadmin tokens [give/set/remove] <player> <amount> &7- player setting commands for normal token balance.'
+    - '&c/tadmin bank [give/set/remove] <player> <amount> &7- player setting commands for bank system.'
+    - '&c/tadmin reload &7- reload all files.'
+    - '&c/tadmin version &7- check what version plugin on.'
+    - ''
+    - '&c<> &7Required. &c[] &7Optional.'
+
+  # normal token balance messages
+  PAY: '&#00fb9a&l光Latinum &7Du hast &e%tokens% &7Latinum an &e%receiver_name%&7 gesendet!'
+  RECEIVED: '&#00fb9a&l光Latinum &7Du hast &e%tokens% &7Latinum erhalten!'
+
+  # checked messages
+  MAX-DEPOSIT: '%PREFIX%  &7So viel kannst du nicht einzahlen.'
+  MIN-DEPOSIT: '%PREFIX%  &7Du musst mehr einzahlen.'
+  MAX-WITHDRAW: '%PREFIX% &7So viel kannst du nicht abheben.'
+  MIN-WITHDRAW: '%PREFIX% &7Du musst mehr abheben.'
+  NOT-ENOUGH-TO-WITHDRAW: '%PREFIX% &7So vo viel hast du nicht auf der Bank.'
+  NOT-ENOUGH-TO-DEPOSIT: '%PREFIX% &7So viel hast du nicht.'
+  NOT_ENOUGH_MATERIALS: '%PREFIX% &cDu hast nicht genug Material dafür!'
+  NOT_ENOUGH_TOKENS: '%PREFIX% &cDu hast nicht genug Latinum!'
+  SEND_YOUR_SELF: '%PREFIX% &cDu kannst nicht Latinum an dich selbst senden!'
+
+  # plugin messages
+  RELOADED: '%PREFIX% &7Plugin Reloaded'
+  PERMISSION: '%PREFIX% &cDazu hast du keine Berechtigung!'
+
